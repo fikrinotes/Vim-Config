@@ -39,36 +39,55 @@ function MyDiff()
   endif
 endfunction
 
+
+call plug#begin()
+Plug 'ryanoasis/vim-devicons'
+Plug 'hzchirs/vim-material'
+Plug 'mattn/emmet-vim'
+call plug#end()
+
+
 packadd! dracula
+packadd! onedark.vim
 syntax enable
+
+let g:material_style='palenight'
+set background=dark
+colorscheme vim-material
 if has('gui_running')
     colorscheme material
-    let g:airline_powerline_fonts = 1
-
+    
 else
-    colorscheme archery
+    colorscheme material
     set termguicolors
 endif
 
 helptags ALL
 set ai
-set guifont=Source\ Code\ Pro\ For\ Powerline:h10
+let g:airline_powerline_fonts = 1
+set guifont=DroidSansMono\ Nerd\ Font\ Mono:h10
 syntax on
 set belloff=all
-set noundofile
+set mouse=a
 set relativenumber
-set number
 set background=dark
-set nobackup
 set path+=**
 set wildmenu
 set noshowmode
-set nowrap
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd BufNewFile *.html r D:\Programming\template.html
-nnoremap html5 :r D:\Programming\template.html
+
+
+"pydiction
+let g:pydiction_location = 'E:/App/Vim/vimfiles/pack/vendor/start/complete-dict'
+let g:pydiction_menu_height = 4
+
+"template :
+nnoremap Html5 :r D:\Programming\template.html
+nnoremap Javaclass :r D:\Programming\template.java
+
 inoremap <F9> <c-y>,
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
@@ -76,15 +95,20 @@ inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 tnoremap <Esc><Esc> <c-w>N
-nnoremap <F10> :! python %<CR> 
+nnoremap <F10> :!python %<CR>
 
 "for emmet:
 imap <c-e><c-e> <c-y>,
-nnoremap tree :NERDTree
-nnoremap dracula :colorscheme dracula
-nnoremap material :colorscheme material
-nnoremap py :cd d:\Programming\Python
-nnoremap home :cd d:\Programming
+nnoremap Tree :NERDTree
+nnoremap Dracula :colorscheme dracula
+nnoremap Material :colorscheme material
+nnoremap Nord :colorscheme nord
+nnoremap Everforest :colorscheme everforest
+nnoremap Arch :colorscheme archery
+nnoremap Py :cd d:\Programming\Python
+nnoremap Pas :cd d:\Programming\Pascal
+nnoremap Java :cd d:Programming\Java
+nnoremap Home :cd d:\Programming
 nnoremap config :cd e:\App\Vim
 nnoremap ) "*y
 nnoremap ( "*p
