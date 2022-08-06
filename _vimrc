@@ -44,6 +44,7 @@ call plug#begin()
 Plug 'ryanoasis/vim-devicons'
 Plug 'hzchirs/vim-material'
 Plug 'mattn/emmet-vim'
+Plug 'uiiaoo/java-syntax.vim'
 call plug#end()
 
 
@@ -56,7 +57,12 @@ set background=dark
 colorscheme vim-material
 if has('gui_running')
     colorscheme material
-    
+    " hiding the toolbar :
+    set guioptions-=T
+    " hiding scrollbar :
+    set guioptions-=r
+    set guioptions-=L 
+
 else
     colorscheme material
     set termguicolors
@@ -64,8 +70,9 @@ endif
 
 helptags ALL
 set ai
+set smartindent
 let g:airline_powerline_fonts = 1
-set guifont=DroidSansMono\ Nerd\ Font\ Mono:h10
+set guifont=DroidSansMono\ Nerd\ Font\ Mono:h9
 syntax on
 set belloff=all
 set mouse=a
