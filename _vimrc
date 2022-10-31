@@ -62,6 +62,7 @@ if has('gui_running')
     " hiding scrollbar :
     set guioptions-=r
     set guioptions-=L 
+    set lines=30 columns=100
 
 else
     colorscheme material
@@ -77,6 +78,9 @@ syntax on
 set belloff=all
 set mouse=a
 set relativenumber
+set number
+set ignorecase
+set smarttab
 set background=dark
 set path+=**
 set wildmenu
@@ -90,6 +94,10 @@ autocmd BufNewFile *.html r D:\Programming\template.html
 "pydiction
 let g:pydiction_location = 'E:/App/Vim/vimfiles/pack/vendor/start/complete-dict'
 let g:pydiction_menu_height = 4
+
+" python highlighting"
+
+let g:python_highlight_all = 1
 
 "template :
 nnoremap Html5 :r D:\Programming\template.html
@@ -124,9 +132,7 @@ vnoremap ( "*p
 set encoding=UTF-8
 
 
-let g:python_highlight_all=1
 let g:airline_section_b= '%{strftime("%c")}'
 let g:airline_section_y= 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
 set t_Co=256
-set ls=2
