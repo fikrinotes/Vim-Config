@@ -62,7 +62,7 @@ if has('gui_running')
     " hiding scrollbar :
     set guioptions-=r
     set guioptions-=L 
-    set lines=30 columns=100
+    set lines=30 columns=110
 
 else
     colorscheme material
@@ -73,12 +73,13 @@ helptags ALL
 set ai
 set smartindent
 let g:airline_powerline_fonts = 1
-set guifont=DroidSansMono\ Nerd\ Font\ Mono:h9
+set guifont=Hack\ Nerd\ Font\ Mono:h9
 syntax on
 set belloff=all
 set mouse=a
 set relativenumber
 set number
+set nowrap
 set ignorecase
 set smarttab
 set background=dark
@@ -88,7 +89,6 @@ set noshowmode
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd BufNewFile *.html r D:\Programming\template.html
 
 
 "pydiction
@@ -117,7 +117,6 @@ imap <c-e><c-e> <c-y>,
 nnoremap Tree :NERDTree
 nnoremap Dracula :colorscheme dracula
 nnoremap Material :colorscheme material
-nnoremap Nord :colorscheme nord
 nnoremap Everforest :colorscheme everforest
 nnoremap Arch :colorscheme archery
 nnoremap Py :cd d:\Programming\Python
