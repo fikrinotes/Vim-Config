@@ -49,7 +49,6 @@ call plug#end()
 
 
 packadd! dracula
-packadd! onedark.vim
 syntax enable
 
 let g:material_style='palenight'
@@ -82,7 +81,6 @@ set number
 set nowrap
 set ignorecase
 set smarttab
-set background=dark
 set path+=**
 set wildmenu
 set noshowmode
@@ -100,8 +98,8 @@ let g:pydiction_menu_height = 4
 let g:python_highlight_all = 1
 
 "template :
-nnoremap Html5 :r D:\Programming\template.html
-nnoremap Javaclass :r D:\Programming\template.java
+nnoremap Html5 :r D:\Programming\Template\template.html
+nnoremap Javaclass :r D:\Programming\Template\template.java
 
 inoremap <F9> <c-y>,
 inoremap ( ()<Esc>i
@@ -123,7 +121,7 @@ nnoremap Py :cd d:\Programming\Python
 nnoremap Pas :cd d:\Programming\Pascal
 nnoremap Java :cd d:Programming\Java
 nnoremap Home :cd d:\Programming
-nnoremap config :cd e:\App\Vim
+nnoremap config :o c:\Users\HP\_vimrc
 nnoremap ) "*y
 nnoremap ( "*p
 vnoremap ) "*y
@@ -135,3 +133,13 @@ let g:airline_section_b= '%{strftime("%c")}'
 let g:airline_section_y= 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#enabled = 1
 set t_Co=256
+
+"VIM backup file directory :
+" tell vim to keep a backup file
+set backup
+
+" tell vim where to put its backup files
+set backupdir=D:\Programming\vim-backup
+
+" tell vim where to put swap files
+set dir=D:\Programming\vim-backup
