@@ -43,7 +43,6 @@ endfunction
 call plug#begin()
 Plug 'ryanoasis/vim-devicons'
 Plug 'hzchirs/vim-material'
-Plug 'mattn/emmet-vim'
 Plug 'uiiaoo/java-syntax.vim'
 call plug#end()
 
@@ -108,7 +107,7 @@ inoremap [ []<Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 tnoremap <Esc><Esc> <c-w>N
-nnoremap <F10> :!python %<CR>
+nnoremap <F10> :!py %<CR>
 
 "for emmet:
 imap <c-e><c-e> <c-y>,
@@ -139,7 +138,6 @@ set t_Co=256
 set backup
 
 " tell vim where to put its backup files
-set backupdir=D:\Programming\vim-backup
-
-" tell vim where to put swap files
-set dir=D:\Programming\vim-backup
+set backupdir=D:/Programming/metadata-folder/backups,.
+set directory=D:/Programming/metadata-folder/swaps,.
+set undodir=D:/Programming/metadata-folder/undos,.
