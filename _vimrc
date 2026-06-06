@@ -123,13 +123,12 @@ imap <c-e><c-e> <c-y>,
 nnoremap Tree :NERDTree
 nnoremap Dracula :colorscheme dracula
 nnoremap Material :colorscheme material
-nnoremap Everforest :colorscheme everforest
-nnoremap Arch :colorscheme archery
 nnoremap Py :cd d:\Programming\Python
 nnoremap Pas :cd d:\Programming\Pascal
 nnoremap Java :cd d:Programming\Java
 nnoremap Home :cd d:\Programming
 nnoremap config :o e:\App\Vim\_vimrc
+nnoremap labstuff :cd d:\Kuliah\Lab Stuff
 nnoremap ) "*y
 nnoremap ( "*p
 vnoremap ) "*y
@@ -147,6 +146,8 @@ set t_Co=256
 "VIM backup file directory :
 " tell vim to keep a backup file
 set backup
+
+set shell=pwsh.exe
 
 " tell vim where to put its backup files
 set backupdir=D:/Programming/metadata-folder/backups,.
